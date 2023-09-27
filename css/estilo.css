@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ background-color: hsl(273, 75%, 66%);   
+ display: flex;
+ justify-content: center;
+ margin-top: 20%;
+ font-family: Arial, Helvetica, sans-serif
+}
+
+.cuerpoBlanco{
+ background-color: white;
+ height: 450px;
+ width: 300px;  
+ border-radius: 20px;
+ padding: 20px;
+}
+
+.sombraMovil{
+ position: relative;
+ left: 30px;   
+}
+
+.escritorio{
+ position: relative;
+ bottom: 220px;
+ left: 33px;
+ width: 240px;   
+}
+
+.titulo{
+    position: relative;
+    bottom: 160px;   
+    text-align: center;
+    font-size: 2em;
+   }
+
+.textotal{
+ position: relative;   
+ bottom: 130px; 
+ font-size: small;
+}
+
+/*parte desplegable del acordeón*/
+
+.acordeon label{
+ display: block;
+ padding: 10px;
+ cursor: pointer;
+ transition: all 300ms ease;
+ border-bottom: 1px rgb(207, 201, 201) solid;
+ color: rgb(128, 116, 116);   
+}
+
+.acordeon .contenido-acordeon{
+ padding: 0;
+ margin: 0px 20px;
+ max-height: 0px;
+ overflow: hidden;
+ color: rgb(128, 116, 116);
+ transition: all 300ms ease;   
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon{
+ max-height: 600px;
+ padding: 5px 0px;   
+}
+
+.btn-acordeon:checked ~ label{
+ color: black; 
+ border: none;  
+ font-weight: bold;
+}
+
+.btn-acordeon{
+ display: none;
+}
+    
+@media screen and (min-width: 800px) {
+
+ .cuerpoBlanco{
+  background-color: white;
+  height: 300px;
+  width: 600px;  
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  bottom: 150px;
+  }
+
+  .escritorio{
+    content: url('../images/illustration-woman-online-desktop.svg');
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 300px;   
+   }  
+
+  .sombraMovil{
+    content: url('../images/bg-pattern-desktop.svg');
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 300px;
+  }
+
+  .titulo{
+    position: relative;
+    bottom: 0px;   
+    left: 40px;
+    font-size: 2em;
+   }
+
+  .textotal{
+   width: 300px; 
+   position: relative;
+   left: 300px;
+   bottom: -20px;
+  }
+
+  .arroba{
+   content: url('../images/illustration-box-desktop.svg');
+   position: absolute;
+   width: 100px;
+   top: 160px;
+   left: 0px;
+  }
+  
+}
